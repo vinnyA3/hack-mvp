@@ -4,10 +4,8 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - **Product details summary**: [https://github.com/team-arendelle/stephenjmark-product-details-summary](https://github.com/team-arendelle/stephenjmark-product-details-summary)
+  - **Reviews**: [https://github.com/team-arendelle/RossHathaway-reviews](https://github.com/team-arendelle/RossHathaway-reviews)
 
 ## Table of Contents
 
@@ -17,14 +15,14 @@
 
 ## Usage
 
-> Some usage instructions
+> Some usage instructions - work in progress ....
 
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
-- Node 6.13.0
-- etc
+- Node *v10.15.0* 
+- npm  *v6.4.1*
 
 ## Development
 
