@@ -8,9 +8,11 @@
     "node": ">=10.15.0"
   },
   "scripts": {
-    "dev": "webpack-dev-server"
+    "client-dev": "webpack-dev-server",
+    "server": "nodemon server/index.js"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "faker": "^4.1.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -22,6 +24,8 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.9",
     "webpack": "^4.29.1",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14"
