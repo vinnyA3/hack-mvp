@@ -11,6 +11,7 @@
     "dev": "webpack-dev-server"
   },
   "dependencies": {
+    "faker": "^4.1.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "sqlite3": "^4.0.6"
