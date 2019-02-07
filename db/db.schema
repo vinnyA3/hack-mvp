@@ -1,12 +1,31 @@
 DROP TABLE IF EXISTS products;
 
-CREATE TABLE products(
+CREATE TABLE products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  productName VARCHAR,
-  price VARCHAR,
-  owningCompany VARCHAR,
-  numStock INTEGER,
-  primeEligible BOOLEAN,
-  fulfilledBy VARCHAR,
-  returnable BOOLEAN
-)
+  productName VARCHAR NOT NULL,
+  originalPrice VARCHAR NOT NULL,
+  lightningDeal BOOLEAN DEFAULT false,
+  salesPercent INTEGER DEFAULT NULL,
+  pricingOptionOne VARCHAR DEFAULT NULL,
+  pricingOptionTwo VARCHAR DEFAULT NULL,
+  owningCompany VARCHAR NOT NULL,
+  fulfilledBy VARCHAR NOT NULL,
+  numInStock INTEGER NOT NULL,
+  primeEligible BOOLEAN DEFAULT true,
+  returnable BOOLEAN DEFAULT false,
+  giftWrapAvail BOOLEAN DEFAULT true,
+  buyUsed BOOLEAN DEFAULT false,
+  usedPrice VARCHAR NULL,
+  protectionPlan BOOLEAN DEFAULT false,
+  protectionPlanPricingOptionOne VARCHAR NULL,
+  protectionPlanPricingOptionTwo VARCHAR NULL,
+  protectionPlanDescription TEXT NULL
+);
+
+DROP TABLE IF EXISTS productReviews;
+
+CREATE TABLE productReviews (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  reviewCount NOT NULL,
+  stars INTEGER DEFAULT 0
+);
