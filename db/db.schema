@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS products;
+
+CREATE TABLE products(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  productName VARCHAR,
+  price VARCHAR,
+  owningCompany VARCHAR,
+  numStock INTEGER,
+  primeEligible BOOLEAN,
+  fulfilledBy VARCHAR,
+  returnable BOOLEAN
+)
