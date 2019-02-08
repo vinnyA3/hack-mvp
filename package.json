@@ -8,8 +8,26 @@
     "node": ">=10.15.0"
   },
   "scripts": {
+    "test": "jest",
     "client-dev": "webpack-dev-server",
     "server": "nodemon server/index.js"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverageFrom": [
+      "**/*.{js, jsx}",
+      "!**/node_modules/**",
+      "!./public/**"
+    ],
+    "coverageDirectory": "./coverage",
+     "coverageThreshold": {
+      "global": {
+        "branches": 60,
+        "functions": 80,
+        "lines": 50,
+        "statements": -10
+      }
+    }
   },
   "dependencies": {
     "express": "^4.16.4",
