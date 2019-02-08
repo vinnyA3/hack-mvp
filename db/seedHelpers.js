@@ -10,9 +10,9 @@ const concatTwoValuesWith = delim => val1 => val2 => `${val1}${delim}${val2}`;
 
 const moneyDelimValues = concatTwoValuesWith('.');
 
-const genDollarsCents = () => {
-  const dollars = genRandomInt(1, 800);
-  const cents = genRandomInt(0, 99);
+const genDollarsCents = (dollarMax = 850, centsMax = 99) => {
+  const dollars = genRandomInt(1, dollarMax);
+  const cents = genRandomInt(0, centsMax);
   return moneyDelimValues(dollars)(cents < 10 ? '0' + cents : cents);
 };
 
@@ -45,8 +45,8 @@ const protectionPlan = () => {
   if (!!genRandomInt(0, 1)) {
     return [
       true,
-      genDollarsCents(),
-      genDollarsCents(),
+      genDollarsCents(30, 99),
+      genDollarsCents(40, 99),
       faker.lorem.sentences(),
     ];
   } else {
