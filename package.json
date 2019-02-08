@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "jest",
-    "client-dev": "webpack-dev-server",
+    "test:watch": "npm run test -- --watch",
+    "client:dev": "webpack-dev-server",
     "server": "nodemon server/index.js"
   },
   "jest": {
