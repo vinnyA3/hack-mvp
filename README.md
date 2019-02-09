@@ -1,11 +1,11 @@
-# Project Name
+# FEC - Amazonas - Product Cart
 
 > Project description
 
 ## Related Projects
 
-  - **Product details summary**: [https://github.com/team-arendelle/stephenjmark-product-details-summary](https://github.com/team-arendelle/stephenjmark-product-details-summary)
-  - **Reviews**: [https://github.com/team-arendelle/RossHathaway-reviews](https://github.com/team-arendelle/RossHathaway-reviews)
+  - Product details summary: [https://github.com/team-arendelle/stephenjmark-product-details-summary](https://github.com/team-arendelle/stephenjmark-product-details-summary)
+  - Reviews: [https://github.com/team-arendelle/RossHathaway-reviews](https://github.com/team-arendelle/RossHathaway-reviews)
 
 ## Table of Contents
 
@@ -21,14 +21,14 @@
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
-- Node *v10.15.0* 
-- npm  *v6.4.1*
+- Node - *v10.15.0* 
+- npm - *v6.4.1*
 
 ## Development
 
 ### Installing Dependencies
 
-From within the root directory:
+From within the project's root directory:
 
 ```sh
 npm install -g webpack
