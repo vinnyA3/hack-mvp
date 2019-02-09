@@ -1,0 +1,53 @@
+$font-color: #111111;
+$base-font-family: Helvetica, arial, sans-serif;
+$base-heading-font-family: $base-font-family;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1320px;
+  margin: 0 auto;
+  color: $font-color;
+}
+
+// heading resets
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p,
+input,
+figcaption,
+span,
+i,
+a {
+  font-family: $base-font-family;
+}
+
+a {
+  color: inherit;
+
+  &:visited,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
