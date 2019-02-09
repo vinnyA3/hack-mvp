@@ -42,8 +42,8 @@ module.exports = {
     ],
   },
   resolve: {
-    modules: ['node_modules', `${SRC_DIR}`],
-    extensions: ['.js', '.jsx', '.scss', '.js', '.json'],
+    modules: ['node_modules', SRC_DIR],
+    extensions: ['.js', '.jsx', '.scss', '.css', '.json'],
   },
   devtool: 'inline-sourcemap',
   target: 'web',
