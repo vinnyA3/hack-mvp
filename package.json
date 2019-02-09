@@ -1,5 +1,5 @@
 {
-  "name": "Amazonas Product Cart",
+  "name": "amazonas-product-cart",
   "version": "1.0.0",
   "description": "A close of Amazon\\'s product add to cart",
   "author": "vinnyA3",
@@ -36,7 +36,6 @@
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.4",
-    "jest": "^24.1.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "sqlite3": "^4.0.6"
@@ -51,6 +50,7 @@
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "eslint-watch": "^4.0.2",
     "faker": "^4.1.0",
+    "jest": "^24.1.0",
     "morgan": "^1.9.1",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.9",
