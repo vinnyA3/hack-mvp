@@ -10,8 +10,11 @@
   "scripts": {
     "test": "jest",
     "test:watch": "npm run test -- --watch",
+    "lint": "eslint",
+    "lint:watch": "esw",
     "client:dev": "webpack-dev-server",
-    "server": "nodemon server/index.js"
+    "server:dev": "nodemon server/index.js",
+    "dev": "npm-run-all --parallel client:dev server:dev"
   },
   "jest": {
     "verbose": true,
@@ -33,7 +36,6 @@
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.4",
-    "faker": "^4.1.0",
     "jest": "^24.1.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -45,10 +47,14 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
+    "eslint": "^5.13.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint-watch": "^4.0.2",
+    "faker": "^4.1.0",
     "morgan": "^1.9.1",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.9",
+    "npm-run-all": "^4.1.5",
     "puppeteer-core": "^1.12.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
