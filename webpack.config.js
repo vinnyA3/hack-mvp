@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const SRC_DIR = path.join(__dirname, './client/src');
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 module.exports = {
   mode: 'development',
@@ -51,7 +51,7 @@ module.exports = {
     proxy: {
       '/api': 'http://localhost:3000',
     },
-    port: process.env.PORT || PORT,
+    port: PORT,
     compress: true,
     contentBase: path.join(__dirname, './public'),
   },
