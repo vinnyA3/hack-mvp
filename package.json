@@ -21,7 +21,7 @@
       "!./public/**"
     ],
     "coverageDirectory": "./coverage",
-     "coverageThreshold": {
+    "coverageThreshold": {
       "global": {
         "branches": 60,
         "functions": 80,
@@ -31,6 +31,7 @@
     }
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.16.4",
     "faker": "^4.1.0",
     "jest": "^24.1.0",
@@ -43,10 +44,14 @@
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "morgan": "^1.9.1",
+    "node-sass": "^4.11.0",
     "nodemon": "^1.18.9",
     "puppeteer-core": "^1.12.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.29.1",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14"
