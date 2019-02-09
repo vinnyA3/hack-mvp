@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.get('/:id', (req, res) => {
+app.get('/api/:id', (req, res) => {
   const { id } = req.params;
 
   if (!id) {
