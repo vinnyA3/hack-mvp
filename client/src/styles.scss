@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1320px;
+  margin: 0 auto;
+  color: #111111;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.app {
+  padding: 1.2em;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  // box-shadow: 0 0.42em 1.1em rgba(0, 0, 0, 0.4);
+}
