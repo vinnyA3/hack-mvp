@@ -1,9 +1,8 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
-import { render } from 'react-dom';
-import styles from './styles';
+import styles from './styles.scss';
 
-class App extends Component {
+class Cart extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,7 +22,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className={styles.app}>
+      <div className={styles.container}>
         <h1>Hello Hack Reactor!!</h1>
         <div>
           {this.state.product
@@ -39,4 +38,4 @@ class App extends Component {
   }
 }
 
-render(<App />, document.getElementById('app'));
+export default Cart;
