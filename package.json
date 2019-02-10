@@ -1,7 +1,7 @@
 {
   "name": "amazonas-product-cart",
   "version": "1.0.0",
-  "description": "A close of Amazon\\'s product add to cart",
+  "description": "A clone of Amazon\\'s product add to cart",
   "author": "vinnyA3",
   "license": "MIT",
   "engines": {
@@ -10,11 +10,12 @@
   "scripts": {
     "test": "jest",
     "test:watch": "npm run test -- --watch",
-    "lint": "eslint",
-    "lint:watch": "esw",
+    "lint": "eslint ./client/src/**/*.js",
+    "lint:watch": "esw ./client/src/**/*.js",
     "client:dev": "webpack-dev-server",
     "server:dev": "nodemon server/index.js",
-    "dev": "npm-run-all --parallel client:dev server:dev"
+    "dev": "npm-run-all --parallel client:dev server:dev",
+    "build": "webpack --config webpack.config.prod.js"
   },
   "jest": {
     "verbose": true,
