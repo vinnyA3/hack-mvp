@@ -27,10 +27,10 @@ class Cart extends Component {
         <div>
           {this.state.product
             ? `${JSON.stringify(this.state.product, null, 2)} ${JSON.stringify(
-                this.state.productReviews,
-                null,
-                2
-              )}`
+              this.state.productReviews,
+              null,
+              2
+            )}`
             : ''}
         </div>
       </div>
