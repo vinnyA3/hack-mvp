@@ -1,6 +1,7 @@
 # FEC - Amazonas - Product Cart
 
-> Project description
+> A visual clone of Amazon's product cart.  Complete with multiple buying options,
+> modals, tooltips ... etc.
 
 ## Related Projects
 
@@ -26,12 +27,8 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 ## Development
 
+
 ### Installing Dependencies
 
-From within the project's root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
-
+All necessary dependencies are include in the project's `package.json`.  In get started ....
+From within the project's root directory, run: `npm install`
