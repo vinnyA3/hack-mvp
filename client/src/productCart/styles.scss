@@ -1,11 +1,11 @@
 $border-color: #dddddd;
 
 .container {
-  font-size: 0.9rem;
-  padding: 1.2em;
+  font-size: 0.8rem;
+  padding: 1.3em;
   border: 1px solid $border-color;
   border-radius: 3px;
-  width: 17rem;
+  width: 15rem;
 
   * + * {
     margin-top: 0.85em;
@@ -18,7 +18,7 @@ $border-color: #dddddd;
 }
 
 .inStock {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: normal;
   color: #008a00;
 }
