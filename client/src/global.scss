@@ -41,13 +41,12 @@ i,
 a {
   font-family: $base-font-family;
 }
+// a {
+//   color: inherit;
 
-a {
-  color: inherit;
-
-  &:visited,
-  &:hover,
-  &:active {
-    text-decoration: none;
-  }
-}
+//   &:visited,
+//   &:hover,
+//   &:active {
+//     text-decoration: none;
+//   }
+// }
