@@ -1,0 +1,29 @@
+.modal {
+  position: absolute;
+  width: 50vw;
+  padding: 1.3em;
+  background-color: #fff;
+  border-radius: 3px;
+  color: black;
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 1.4em;
+    width: 1.4em;
+  }
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.71);
+  }
+}
