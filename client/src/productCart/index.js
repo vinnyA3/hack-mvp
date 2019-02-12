@@ -39,7 +39,7 @@ class Cart extends Component {
                 {this.state.product.originalPrice}
               </h3>
               {this.state.product.numInStock > 20 ? (
-                <h3 className={styles.inStock}>In Stock.</h3>
+                <h4 className={styles.inStock}>In Stock.</h4>
               ) : (
                 'hello'
               )}
