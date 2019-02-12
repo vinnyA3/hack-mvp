@@ -8,7 +8,7 @@ module.exports = {
   entry: [SRC_DIR + '/index.js'],
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'dist')
   },
   module: {
     rules: [
@@ -26,6 +26,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
+              url: false,
               modules: true,
               sourceMap: true,
               localIdentName: '[local]__[hash:base64:5]',
