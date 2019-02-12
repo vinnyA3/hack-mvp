@@ -5,7 +5,7 @@ const dropdownSelect = ({ type = 'Qty', children }) => {
   return (
     <>
       <label htmlFor="">{type}:</label>&nbsp;
-      <select>{children}</select>
+      <select className={styles.select}>{children}</select>
     </>
   );
 };
