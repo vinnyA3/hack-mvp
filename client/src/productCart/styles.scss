@@ -1,7 +1,29 @@
 $border-color: #dddddd;
 
 .container {
+  font-size: 0.9rem;
   padding: 1.2em;
   border: 1px solid $border-color;
-  border-radius: 5px;
+  border-radius: 3px;
+  width: 17rem;
+
+  * + * {
+    margin-top: 0.85em;
+  }
+}
+
+.currency {
+  font-size: 1.2rem;
+  color: #b32d0b;
+}
+
+.inStock {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #008a00;
+}
+
+.price {
+  font-weight: normal;
+  color: #b32d0b;
 }
