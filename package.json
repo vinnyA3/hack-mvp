@@ -13,7 +13,7 @@
     "lint": "eslint ./client/src/**/*.js",
     "lint:watch": "esw ./client/src/**/*.js",
     "client:dev": "webpack-dev-server",
-    "server:dev": "nodemon server/index.js",
+    "server:dev": "NODE_PATH=./server nodemon server/index.js",
     "dev": "npm-run-all --parallel client:dev server:dev",
     "build": "webpack --config webpack.config.prod.js"
   },
