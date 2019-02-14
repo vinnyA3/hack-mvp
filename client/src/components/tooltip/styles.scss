@@ -1,8 +1,8 @@
 .tooltip {
   position: absolute;
   bottom: 130%;
-  left: 10%;
-  width: 35em;
+  right: -10%;
+  width: 200%;
   background-color: #fff;
   border-radius: 3px;
   padding: 1.3em;
@@ -12,6 +12,7 @@
     content: '';
     position: absolute;
     bottom: -0.8em;
+    right: 40%;
     width: 0.8em;
     border-right: 1.2em solid transparent;
     border-left: 1.2em solid transparent;
@@ -21,5 +22,6 @@
   &__close {
     position: absolute;
     right: 1.3em;
+    cursor: pointer;
   }
 }
