@@ -20,12 +20,12 @@ module.exports = {
         .get(
           `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=${API_KEY}`
         )
-        .then(({ data }) => {
-          return res.send({
+        .then(({ data }) =>
+          res.send({
             message: 'okay',
             results: data.results[0].formatted_address,
-          });
-        })
+          })
+        )
         .catch(err =>
           res.status(500).send({ message: 'something went wrong' })
         );
