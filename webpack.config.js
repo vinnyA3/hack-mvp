@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const SRC_DIR = path.join(__dirname, './client/src');
+const PUBLIC_DIR = path.join(__dirname, './client/public');
 const PORT = process.env.PORT || 8000;
 
 module.exports = {
@@ -8,7 +9,8 @@ module.exports = {
   entry: [SRC_DIR + '/index.js'],
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, 'dist')
+    path: path.join(__dirname, 'dist'),
+    // publicPath: PUBLIC_DIR,
   },
   module: {
     rules: [
@@ -54,6 +56,6 @@ module.exports = {
     },
     port: PORT,
     compress: true,
-    contentBase: path.join(__dirname, './public'),
+    contentBase: PUBLIC_DIR,
   },
 };
