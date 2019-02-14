@@ -1,0 +1,25 @@
+.tooltip {
+  position: absolute;
+  bottom: 130%;
+  left: 10%;
+  width: 35em;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 1.3em;
+  box-shadow: 0 0.1em 0.4em 0 rgba(0, 0, 0, 0.4);
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -0.8em;
+    width: 0.8em;
+    border-right: 1.2em solid transparent;
+    border-left: 1.2em solid transparent;
+    border-top: 0.8em solid red;
+  }
+
+  &__close {
+    position: absolute;
+    right: 1.3em;
+  }
+}
