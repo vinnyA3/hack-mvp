@@ -41,12 +41,21 @@ i,
 a {
   font-family: $base-font-family;
 }
-// a {
-//   color: inherit;
 
-//   &:visited,
-//   &:hover,
-//   &:active {
-//     text-decoration: none;
-//   }
-// }
+a {
+  text-decoration: none;
+
+  &:visited,
+  &:active {
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: blue;
+  }
+
+  &:hover {
+    color: #CB6A1F;
+    text-decoration: underline;
+  }
+}
