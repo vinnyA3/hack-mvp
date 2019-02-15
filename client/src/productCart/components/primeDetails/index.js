@@ -14,9 +14,7 @@ class PrimeDetails extends Component {
   }
 
   toggleTooltip() {
-    // this.setState(prevState => ({ showTooltip: !prevState.toggleTooltip }));
     this.setState({ showTooltip: !this.state.showTooltip });
-    console.log(this.state);
   }
 
   render() {
