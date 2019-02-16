@@ -1,0 +1,13 @@
+$zyzz: (
+  modal-content: 250,
+  modal: 200,
+  tooltip: 150,
+);
+
+@function z-idx($key) {
+  @return map-get($zyzz, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-idx($key);
+}
