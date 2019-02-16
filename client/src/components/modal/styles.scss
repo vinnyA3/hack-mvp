@@ -8,7 +8,7 @@ $modal-position: fixed;
 }
 
 .modal {
-  position: absolute;
+  position: $modal-position;
   width: 50vw;
   padding: 1.3em;
   background-color: #fff;
