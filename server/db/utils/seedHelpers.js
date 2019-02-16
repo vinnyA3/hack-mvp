@@ -1,10 +1,5 @@
 const faker = require('faker');
-
-const genRandomInt = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+const genRandomInt = require('utils/genRandInt');
 
 const concatTwoValuesWith = delim => val1 => val2 => `${val1}${delim}${val2}`;
 
@@ -55,7 +50,6 @@ const protectionPlan = () => {
 };
 
 module.exports = {
-  genRandomInt,
   concatTwoValuesWith,
   moneyDelimValues,
   genDollarsCents,

@@ -1,8 +1,8 @@
 const sqlite3 = require('sqlite3').verbose();
 const faker = require('faker');
 const path = require('path');
+const genRandomInt = require('utils/genRandInt');
 const {
-  genRandomInt,
   moneyDelimValues,
   genDollarsCents,
   getLightningDeal,
@@ -12,7 +12,7 @@ const {
 } = require('./seedHelpers');
 
 // init database connection
-const db = new sqlite3.Database(path.join(__dirname, './db.products'));
+const db = new sqlite3.Database(path.join(__dirname, '../db.products'));
 
 // generate the random data
 db.serialize(() => {
