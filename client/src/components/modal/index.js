@@ -6,10 +6,12 @@ const Modal = ({ children, onClose, open }) =>
   open
     ? createPortal(
         <div className={styles.modal}>
-          <div className={styles.modal__close} onClick={onClose}>
-            &times;
+          <div className={styles.modal__content}>
+            <div className={styles.modal__close} onClick={onClose}>
+              &times;
+            </div>
+            {children}
           </div>
-          {children}
         </div>,
         document.body
       )
