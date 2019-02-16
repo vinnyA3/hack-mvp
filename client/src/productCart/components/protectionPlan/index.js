@@ -56,13 +56,15 @@ class ProtectionPlan extends Component {
           </label>
         </form>
         <Modal open={this.state.showModal} onClose={this.toggleModal}>
-          <h4>Amazon Product</h4>
-          <p>
-            Amet dicta quidem nesciunt inventore cumque id In et cumque nam
-            reiciendis libero sed. Aliquid repellendus aspernatur rerum
-            accusamus quaerat ab facilis Atque nesciunt iste nisi numquam iste
-            vitae Illum.
-          </p>
+          <div className={styles.protection__description}>
+            <h4>Amazon Product</h4>
+            <p>
+              Amet dicta quidem nesciunt inventore cumque id In et cumque nam
+              reiciendis libero sed. Aliquid repellendus aspernatur rerum
+              accusamus quaerat ab facilis Atque nesciunt iste nisi numquam iste
+              vitae Illum.
+            </p>
+          </div>
         </Modal>
       </>
     );
