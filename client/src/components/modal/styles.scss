@@ -12,7 +12,7 @@ $modal-position: fixed;
   width: 50vw;
 
   * {
-    z-index: 100;
+    @include z-index(modal-content);
   }
 
   &__close {
@@ -23,16 +23,17 @@ $modal-position: fixed;
     width: 1.4em;
   }
 
+  // expand modal content to the height / width of the modal container
+  &__content {
+    position: absolute;
+    @include position-full;
+  }
+
   &::after {
     content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: 1;
+    position: $modal-position;
     background-color: rgba(0, 0, 0, 0.71);
+    @include z-index(modal);
+    @include position-full;
   }
 }
