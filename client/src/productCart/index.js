@@ -33,59 +33,54 @@ class Cart extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <div>
-          {this.state.product ? (
-            <>
-              <h3 className={styles.price}>
-                <span className={styles.currency}>&#36;</span>
-                {this.state.product.originalPrice}
-              </h3>
-              {!!this.state.product.primeEligible ? (
-                <PrimeDetails />
-              ) : (
-                <>
-                  <p>
-                    <b>&amp; Free Shipping</b>.&nbsp;<a href="#">Details.</a>
-                  </p>
-                  <p>
-                    <b>Want it tomorrow, Feb 13?</b>Order within 22hrs and 2mins
-                    and chose <b>One-Day shipping</b> at checkout.{' '}
-                    <a href="#">Details.</a>
-                  </p>
-                </>
-              )}
-              {this.state.product.numInStock > 20 ? (
-                <h4 className={styles.inStock}>In Stock.</h4>
-              ) : (
-                'hello'
-              )}
-              <p>
-                Ships from and sold by {this.state.product.owningCompany}.{' '}
-                {!!this.state.product.giftWrapAvail
-                  ? 'Gift-wrap available.'
-                  : ''}
-              </p>
-              <DropdownSelect type="Qty" children={optionGenerator(30)} />
-              {this.state.product.protectionPlan ? (
-                <ProtectionPlan
-                  protectionPlanPricingOptionOne={
-                    this.state.product.protectionPlanPricingOptionOne
-                  }
-                  protectionPlanPricingOptionTwo={
-                    this.state.product.protectionPlanPricingOptionTwo
-                  }
-                />
-              ) : (
-                ''
-              )}
-              <CheckoutButton />
-              <BuyNowButton />
-              <Location />
-            </>
-          ) : (
-            ''
-          )}
-        </div>
+        {this.state.product ? (
+          <Fragment>
+            <h3 className={styles.price}>
+              <span className={styles.currency}>&#36;</span>
+              {this.state.product.originalPrice}
+            </h3>
+            {!!this.state.product.primeEligible ? (
+              <PrimeDetails />
+            ) : (
+              <Fragment>
+                <p>
+                  <b>&amp; Free Shipping</b>.&nbsp;<a href="#">Details.</a>
+                </p>
+                <p>
+                  <b>Want it tomorrow, Feb 13?</b>Order within 22hrs and 2mins
+                  and chose <b>One-Day shipping</b> at checkout.{' '}
+                  <a href="#">Details.</a>
+                </p>
+              </Fragment>
+            )}
+            {this.state.product.numInStock > 20 ? (
+              <h4 className={styles.inStock}>In Stock.</h4>
+            ) : (
+              'hello'
+            )}
+            <p>
+              Ships from and sold by {this.state.product.owningCompany}.{' '}
+              {!!this.state.product.giftWrapAvail ? 'Gift-wrap available.' : ''}
+            </p>
+            <DropdownSelect type="Qty" children={optionGenerator(30)} />
+            {this.state.product.protectionPlan ? (
+              <ProtectionPlan
+                protectionPlanPricingOptionOne={
+                  this.state.product.protectionPlanPricingOptionOne
+                }
+                protectionPlanPricingOptionTwo={
+                  this.state.product.protectionPlanPricingOptionTwo
+                }
+              />
+            ) : (
+              ''
+            )}
+            <CartButtons />
+            <Location />
+          </Fragment>
+        ) : (
+          ''
+        )}
       </div>
     );
   }
