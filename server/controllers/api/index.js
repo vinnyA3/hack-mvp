@@ -1,10 +1,6 @@
-const path = require('path');
 const axios = require('axios');
-const sqlite3 = require('sqlite3').verbose();
-const { genRandomInt } = require('db/seedHelpers');
-const db = new sqlite3.Database(
-  path.resolve(__dirname, '../../db/db.products')
-);
+const genRandomInt = require('utils/genRandInt');
+const db = require('db/connection');
 const { API_KEY } = require('config/config');
 
 module.exports = {
