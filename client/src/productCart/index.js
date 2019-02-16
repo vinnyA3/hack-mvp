@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { createPortal } from 'react-dom';
 import axios from 'axios';
 import styles from './styles.scss';
@@ -7,8 +7,7 @@ import DropdownSelect from 'components/dropdownSelect';
 import optionGenerator from 'utils/optionGenerator';
 import ProtectionPlan from './components/protectionPlan';
 import Location from './components/location';
-import CheckoutButton from './components/checkoutButton';
-import BuyNowButton from './components/buyNowButton';
+import CartButtons from './components/cartButtons';
 import PrimeDetails from './components/primeDetails';
 
 class Cart extends Component {
