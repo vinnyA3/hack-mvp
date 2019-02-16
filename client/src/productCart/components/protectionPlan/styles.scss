@@ -1,3 +1,11 @@
 .protectionPrice {
   color: #b32d0b;
 }
+
+.protection {
+  &__description {
+    border-radius: 3px;
+    padding: 1.3em;
+    background-color: #fff;
+  }
+}
