@@ -39,6 +39,12 @@ module.exports = {
               sourceMap: true,
             },
           },
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: require(SRC_DIR + '/sass'),
+            },
+          },
         ],
       },
     ],
