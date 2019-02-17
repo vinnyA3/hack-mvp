@@ -1,20 +1,24 @@
+@mixin icon-placement() {
+  top: 2px;
+  left: 2px;
+  height: 25px;
+  width: 25px;
+  background-image: url('amazon.png');
+}
+
 .cart {
-  background-color: rgb(249, 211, 118);
+  background-color: $amzn-one;
   cursor: pointer;
 
   &:hover {
-    background-color: #efbb43;
+    background-color: $amzn-two;
   }
 
   &__icon {
     position: absolute;
     display: inline-block;
+    @include icon-placement;
     // pixel units taken from amazon site...
-    top: 2px;
-    left: 2px;
-    height: 25px;
-    width: 25px;
-    background-image: url('amazon.png');
     background-position: -35px -5px;
   }
 
@@ -25,18 +29,14 @@
 }
 
 .buy {
-  background-color: #f0c14b;
+  background-color: $amzn-three;
   cursor: pointer;
 
   &__icon {
     position: absolute;
     display: inline-block;
     // pixel units taken from amazon site...
-    top: 2px;
-    left: 2px;
-    height: 25px;
-    width: 25px;
-    background-image: url('amazon.png');
+    @include icon-placement;
     background-position: -35px -60px;
   }
 
