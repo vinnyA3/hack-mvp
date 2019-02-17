@@ -20,6 +20,10 @@ class ProtectionPlan extends Component {
     const {
       protectionPlanPricingOptionOne,
       protectionPlanPricingOptionTwo,
+      protectionPlanDesc,
+      product,
+      productReviewCount,
+      productStars,
     } = this.props;
 
     return (

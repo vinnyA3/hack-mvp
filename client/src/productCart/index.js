@@ -71,6 +71,12 @@ class Cart extends Component {
                 protectionPlanPricingOptionTwo={
                   this.state.product.protectionPlanPricingOptionTwo
                 }
+                protectionPlanDesc={
+                  this.state.product.protectionPlanDescription
+                }
+                product={this.state.product.productName}
+                productReviewCount={this.state.productReviews.reviewCount}
+                productStars={this.state.productReviews.stars}
               />
             ) : (
               ''
