@@ -14,16 +14,16 @@ $border-color: #dddddd;
 
 .currency {
   font-size: 1.2rem;
-  color: #b32d0b;
+  color: $amzn-price;
 }
 
 .inStock {
   font-size: 1rem;
   font-weight: normal;
-  color: #008a00;
+  color: $amzn-green;
 }
 
 .price {
   font-weight: normal;
-  color: #b32d0b;
+  color: $amzn-price;
 }
