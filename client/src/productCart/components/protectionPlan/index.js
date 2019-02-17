@@ -61,13 +61,9 @@ class ProtectionPlan extends Component {
         </form>
         <Modal open={this.state.showModal} onClose={this.toggleModal}>
           <div className={styles.protection__description}>
-            <h4>Amazon Product</h4>
-            <p>
-              Amet dicta quidem nesciunt inventore cumque id In et cumque nam
-              reiciendis libero sed. Aliquid repellendus aspernatur rerum
-              accusamus quaerat ab facilis Atque nesciunt iste nisi numquam iste
-              vitae Illum.
-            </p>
+            <h4>{product}</h4>
+            <div>{`${productStars} (${productReviewCount})`}</div>
+            <p>{protectionPlanDesc}</p>
           </div>
         </Modal>
       </>
