@@ -9,7 +9,7 @@ import ProtectionPlan from './components/protectionPlan';
 import Location from './components/location';
 import CartButtons from './components/cartButtons';
 import PrimeDetails from './components/primeDetails';
-import getQueryParams from 'utils/getQueryParams';
+// import getQueryParams from 'utils/getQueryParams';
 
 class Cart extends Component {
   constructor(props) {
