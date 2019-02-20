@@ -21,13 +21,15 @@ class Cart extends Component {
   }
 
   componentDidMount() {
-    axios.get('/api/3').then(({ data }) => {
-      console.log(data.rows);
-      this.setState({
-        product: data.rows,
-        productReviews: data.rRows,
+    axios
+      .get('http://ec2-52-87-193-146.compute-1.amazonaws.com/api/3')
+      .then(({ data }) => {
+        console.log(data.rows);
+        this.setState({
+          product: data.rows,
+          productReviews: data.rRows,
+        });
       });
-    });
   }
 
   render() {
