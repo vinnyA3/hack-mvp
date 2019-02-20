@@ -22,7 +22,7 @@ class Cart extends Component {
   }
 
   componentDidMount() {
-    let id = getQueryParams('id', 3);
+    const id = window.location.pathname.split("/").pop();
     console.log('param is: ', id);
 
     axios
