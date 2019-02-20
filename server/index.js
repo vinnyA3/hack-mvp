@@ -3,10 +3,12 @@ const morgan = require('morgan');
 const path = require('path');
 const PORT = process.env.PORT || 3000;
 const app = express();
+const cors = require('cors');
 
 // MIDDLEWARE
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(cors());
 app.use(express.static(path.join(__dirname, './static')));
 app.use(express.urlencoded({ extended: true }));
 
