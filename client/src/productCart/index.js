@@ -21,7 +21,7 @@ class Cart extends Component {
   }
 
   componentDidMount() {
-    axios.get('/api/6').then(({ data }) => {
+    axios.get('/api/3').then(({ data }) => {
       console.log(data.rows);
       this.setState({
         product: data.rows,

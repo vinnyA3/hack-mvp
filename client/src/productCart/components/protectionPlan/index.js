@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import styles from './styles.scss';
+import Button from 'components/button';
 import Modal from 'components/modal';
+
+/// hooks
+// useEffect(() => {
+// })
 
 class ProtectionPlan extends Component {
   constructor(props) {
@@ -10,11 +15,19 @@ class ProtectionPlan extends Component {
     };
 
     this.toggleModal = this.toggleModal.bind(this);
+    // this.updateCheckbox = this.updateCheckbox.bind(this);
   }
 
   toggleModal() {
     this.setState(prevState => ({ showModal: !prevState.showModal }));
   }
+
+  // updateCheckbox() {
+  //   const target = e.target
+  //   const value = target.type === 'checkbox' ? target.checked : target.value
+  //   const name = target.name
+  //   this.setState(prevState => ({ checked: !prevState.checked }));
+  // }
 
   render() {
     const {
@@ -61,9 +74,24 @@ class ProtectionPlan extends Component {
         </form>
         <Modal open={this.state.showModal} onClose={this.toggleModal}>
           <div className={styles.protection__description}>
-            <h4>{product}</h4>
-            <div>{`${productStars} (${productReviewCount})`}</div>
-            <p>{protectionPlanDesc}</p>
+            <div className={styles.protection__title}>
+              <h4>Add to your order</h4>
+            </div>
+            <div className={styles.protection__left}>
+              <h3>{product}</h3>
+              <div>{`${productStars} (${productReviewCount})`}</div>
+              <p>{protectionPlanDesc}</p>
+            </div>
+            <div className={styles.protection__right}>
+              <div className={styles.protection__buttons}>
+                <Button>
+                  <span>Add plan</span>
+                </Button>
+                <Button>
+                  <span>No thanks</span>
+                </Button>
+              </div>
+            </div>
           </div>
         </Modal>
       </>

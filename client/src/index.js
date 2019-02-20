@@ -3,4 +3,4 @@ import { render } from 'react-dom';
 import styles from './global';
 import ProductCart from 'productCart';
 
-render(<ProductCart />, document.getElementById('app'));
+render(<ProductCart />, document.getElementById('cart'));

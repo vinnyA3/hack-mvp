@@ -9,6 +9,7 @@ const Tooltip = ({ children, onClose, open, myRef }) =>
           <div className={styles.tooltip__close} onClick={onClose}>
             &times;
           </div>
+          <div className={styles.tooltip__arrow} />
           {children}
         </div>,
         myRef.current

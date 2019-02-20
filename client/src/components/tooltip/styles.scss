@@ -6,22 +6,41 @@
   background-color: #fff;
   border-radius: 3px;
   padding: 1.3em;
-  box-shadow: 0 0.1em 0.4em 0 rgba(0, 0, 0, 0.4);
-
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: -0.8em;
-    right: 40%;
-    width: 0.8em;
-    border-right: 1.2em solid transparent;
-    border-left: 1.2em solid transparent;
-    border-top: 0.8em solid red;
-  }
+  box-shadow: 0 0.1em 0.4em 0.04em rgba(0, 0, 0, 0.3);
 
   &__close {
     position: absolute;
     right: 1.3em;
     cursor: pointer;
+  }
+
+  &__arrow {
+    position: absolute;
+    bottom: 0;
+    height: 2.2em;
+    width: 2.2em;
+    right: 40%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -0.6em;
+      width: 3.6em;
+      height: 2.2em;
+      background-color: #fff;
+      z-index: 10;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5em;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 0.1em 0.4em 0.04em rgba(0, 0, 0, 0.3);
+      transform: rotate(45deg);
+    }
   }
 }

@@ -21,6 +21,7 @@ $modal-position: fixed;
     right: 0;
     height: 1.4em; // default height / width -- allow user modification
     width: 1.4em;
+    z-index: 300;
   }
 
   // expand modal content to the height / width of the modal container
