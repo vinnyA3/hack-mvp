@@ -9,7 +9,6 @@ import ProtectionPlan from './components/protectionPlan';
 import Location from './components/location';
 import CartButtons from './components/cartButtons';
 import PrimeDetails from './components/primeDetails';
-// import getQueryParams from 'utils/getQueryParams';
 
 class Cart extends Component {
   constructor(props) {
@@ -27,7 +26,8 @@ class Cart extends Component {
 
     axios
       // .get(`http://ec2-52-87-193-146.compute-1.amazonaws.com/api/${id || 3}`)
-      .get(`http://ec2-52-87-193-146.compute-1.amazonaws.com/api/3`)
+      // .get(`http://ec2-52-87-193-146.compute-1.amazonaws.com/api/3`)
+      .get(`http://localhost:3000/api/3`)
       .then(({ data }) => {
         console.log(data.rows);
         this.setState({
