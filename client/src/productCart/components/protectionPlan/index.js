@@ -3,10 +3,6 @@ import styles from './styles.scss';
 import Button from 'components/button';
 import Modal from 'components/modal';
 
-/// hooks
-// useEffect(() => {
-// })
-
 class ProtectionPlan extends Component {
   constructor(props) {
     super(props);
@@ -15,19 +11,11 @@ class ProtectionPlan extends Component {
     };
 
     this.toggleModal = this.toggleModal.bind(this);
-    // this.updateCheckbox = this.updateCheckbox.bind(this);
   }
 
   toggleModal() {
     this.setState(prevState => ({ showModal: !prevState.showModal }));
   }
-
-  // updateCheckbox() {
-  //   const target = e.target
-  //   const value = target.type === 'checkbox' ? target.checked : target.value
-  //   const name = target.name
-  //   this.setState(prevState => ({ checked: !prevState.checked }));
-  // }
 
   render() {
     const {
