@@ -5,18 +5,18 @@ import Modal from 'components/modal';
 
 const ProtectionModal = ({
   showModal,
-  toggleModal,
+  onClose,
   product
 }) => {
   const { productStars, productReviewCount, protectionPlanDesc } = product;
   return (
-    <Modal open={showModal} onClose={toggleModal}>
+    <Modal open={showModal} onClose={onClose}>
       <div className={styles.protection__description}>
         <div className={styles.protection__title}>
           <h4>Add to your order</h4>
         </div>
         <div className={styles.protection__left}>
-          <h3>{product}</h3>
+          <h3>{product.product}</h3>
           <div>{`${productStars} (${productReviewCount})`}</div>
           <p>{protectionPlanDesc}</p>
         </div>
