@@ -22,11 +22,12 @@ class Cart extends Component {
   }
 
   componentDidMount() {
-    const id = window.location.pathname.split("/").pop();
-    console.log('param is: ', id);
+    // const id = window.location.pathname.split("/").pop();
+    // console.log('param is: ', id);
 
     axios
-      .get(`http://ec2-52-87-193-146.compute-1.amazonaws.com/api/${id || 3}`)
+      // .get(`http://ec2-52-87-193-146.compute-1.amazonaws.com/api/${id || 3}`)
+      .get(`http://ec2-52-87-193-146.compute-1.amazonaws.com/api/3`)
       .then(({ data }) => {
         console.log(data.rows);
         this.setState({
