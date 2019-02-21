@@ -89,7 +89,6 @@ class Cart extends Component {
               ''
             )}
             <CartButtons />
-            <Location />
           </Fragment>
         ) : (
           ''
