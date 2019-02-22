@@ -1,7 +1,7 @@
 const axios = require('axios');
 const genRandomInt = require('utils/genRandInt');
 const db = require('db/connection');
-const { API_KEY } = require('config/config');
+const { API_KEY } = require('config/secret');
 
 module.exports = {
   getGeolocation: (req, res) => {
