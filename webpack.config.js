@@ -4,6 +4,11 @@ const SRC_DIR = path.join(__dirname, './client/src');
 const PUBLIC_DIR = path.join(__dirname, './client/public');
 const PORT = 8000;
 
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+  return prev;
+}, {});
+
 module.exports = {
   mode: 'development',
   entry: [SRC_DIR + '/index.js'],
