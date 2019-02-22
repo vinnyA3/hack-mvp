@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 // ROUTES
 app.use('/api', require('./routes/api'));
 app.get('/bundle', (req, res) =>
-  res.sendFile(path.resolve(__dirname, '../client/dist/bundle.js'))
+  res.sendFile(path.resolve(__dirname, '../dist/bundle.js'))
 );
+
 app.listen(PORT, () => (console.log(`Listening on port ${PORT}`), void 0));
