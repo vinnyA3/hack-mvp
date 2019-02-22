@@ -4,12 +4,7 @@ const SRC_DIR = path.join(__dirname, './client/src');
 const PUBLIC_DIR = path.join(__dirname, './client/public');
 const PORT = 8000;
 
-const envKeys = Object.keys(env).reduce((prev, next) => {
-  prev[`process.env.${next}`] = JSON.stringify(env[next]);
-  return prev;
-}, {});
-
-module.exports = {
+module.exports = env => ({
   mode: 'development',
   entry: [SRC_DIR + '/index.js'],
   output: {
@@ -55,7 +50,9 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.DefinePlugin({ `process.env.API_URL`: JSON.stringify(${env.API_URL}) })
+    new webpack.DefinePlugin({
+      'process.env.API_URL': JSON.stringify(env.API_URL),
+    }),
   ],
   resolve: {
     modules: ['node_modules', SRC_DIR],
@@ -71,4 +68,4 @@ module.exports = {
     compress: true,
     contentBase: PUBLIC_DIR,
   },
-};
+});
