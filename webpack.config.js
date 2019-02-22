@@ -49,6 +49,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({ `process.env.API_URL`: JSON.stringify(${env.API_URL}) })
+  ],
   resolve: {
     modules: ['node_modules', SRC_DIR],
     extensions: ['.js', '.jsx', '.scss', '.css', '.json'],
