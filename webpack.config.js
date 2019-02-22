@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const SRC_DIR = path.join(__dirname, './client/src');
 const PUBLIC_DIR = path.join(__dirname, './client/public');
-const PORT = process.env.PORT || 8000;
+const PORT = 8000;
 
 module.exports = {
   mode: 'development',
