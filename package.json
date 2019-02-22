@@ -16,7 +16,7 @@
     "server:dev": "NODE_PATH=./server nodemon server/index.js",
     "clean:dist": "rimraf ./dist",
     "dev": "npm-run-all --parallel client:dev server:dev",
-    "build": "npm run clean:dist && webpack --env.API_URL='http://ec2-52-87-193-146.compute-1.amazonaws.com/api/' -d"
+    "build": "npm run clean:dist && webpack --env.API_URL='http://ec2-52-87-193-146.compute-1.amazonaws.com/api' -d"
   },
   "jest": {
     "verbose": true,
