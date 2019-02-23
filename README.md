@@ -32,3 +32,8 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 All necessary dependencies are include in the project's `package.json`.  In get started ....
 From within the project's root directory, run: `npm install`
+
+
+### Final Product
+
+![project](https://github.com/team-arendelle/vinnyA3-add-to-cart/fec-sc.jpg)
