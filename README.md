@@ -36,4 +36,4 @@ From within the project's root directory, run: `npm install`
 
 ### Final Product
 
-![project](https://github.com/team-arendelle/vinnyA3-add-to-cart/fec-sc.jpg)
+![project](https://github.com/team-arendelle/vinnyA3-add-to-cart/blob/master/fec-sc.jpg?raw=true)
