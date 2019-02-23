@@ -36,6 +36,5 @@ From within the project's root directory, run: `npm install`
 
 ## Final Product
 
-![product cart component](https://github.com/team-arendelle/vinnyA3-add-to-cart/blob/master/fec-cart.jpg?raw=true)
+![product cart component](https://github.com/team-arendelle/vinnyA3-add-to-cart/blob/master/fec-cart.jpg?raw=true) ![project running on proxy with all components](https://github.com/team-arendelle/vinnyA3-add-to-cart/blob/master/fec-sc.jpg?raw=true)
 
-![project running on proxy with all components](https://github.com/team-arendelle/vinnyA3-add-to-cart/blob/master/fec-sc.jpg?raw=true)
