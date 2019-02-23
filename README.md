@@ -34,6 +34,6 @@ All necessary dependencies are include in the project's `package.json`.  In get 
 From within the project's root directory, run: `npm install`
 
 
-### Final Product
+## Final Product
 
 ![project](https://github.com/team-arendelle/vinnyA3-add-to-cart/blob/master/fec-sc.jpg?raw=true)
