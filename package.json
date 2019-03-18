@@ -1,7 +1,7 @@
 {
-  "name": "amazonas-product-cart",
+  "name": "mvp-vinnya3",
   "version": "1.0.0",
-  "description": "A clone of Amazon\\'s product add to cart",
+  "description": "MVP project - Hack Reactor",
   "author": "vinnyA3",
   "license": "MIT",
   "engines": {
@@ -12,11 +12,11 @@
     "test:watch": "npm run test -- --watch",
     "lint": "eslint ./client/src/**/*.js",
     "lint:watch": "esw ./client/src/**/*.js",
-    "client:dev": "webpack-dev-server --env.API_URL='http://localhost:8000' --config webpack.config.js",
+    "client:dev": "webpack-dev-server --config webpack.config.js",
     "server:dev": "NODE_PATH=./server nodemon server/index.js",
     "clean:dist": "rimraf ./dist",
-    "dev": "npm-run-all --parallel client:dev server:dev",
-    "build": "npm run clean:dist && webpack --env.API_URL='http://ec2-52-87-193-146.compute-1.amazonaws.com' -d"
+    "dev": "npm-run-all --parallel client:dev",
+    "build": "npm run clean:dist && webpack -p"
   },
   "jest": {
     "verbose": true,
@@ -39,10 +39,8 @@
     "axios": "^0.18.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "memory-cache": "^0.2.0",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "sqlite3": "^4.0.6"
+    "react-dom": "^16.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -51,18 +49,15 @@
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
     "eslint": "^5.13.0",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-watch": "^4.0.2",
-    "faker": "^4.1.0",
     "jest": "^24.1.0",
     "morgan": "^1.9.1",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.9",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.16.4",
-    "puppeteer-core": "^1.12.2",
     "rimraf": "^2.6.3",
     "sass-loader": "^7.1.0",
     "sass-resources-loader": "^2.0.0",

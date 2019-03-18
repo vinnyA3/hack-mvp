@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import styles from './global';
-import ProductCart from 'productCart';
 
-render(<ProductCart />, document.getElementById('cart'));
+const App = () => {
+  return <h1>Hello World!!</h1>;
+};
+
+render(<App />, document.getElementById('app'));

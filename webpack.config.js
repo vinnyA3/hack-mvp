@@ -49,11 +49,6 @@ module.exports = env => ({
       },
     ],
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env.API_URL': JSON.stringify(env.API_URL),
-    }),
-  ],
   resolve: {
     modules: ['node_modules', SRC_DIR],
     extensions: ['.js', '.jsx', '.scss', '.css', '.json'],
@@ -61,9 +56,6 @@ module.exports = env => ({
   devtool: 'inline-sourcemap',
   target: 'web',
   devServer: {
-    proxy: {
-      '/api': 'http://localhost:3000',
-    },
     port: PORT,
     compress: true,
     contentBase: PUBLIC_DIR,
