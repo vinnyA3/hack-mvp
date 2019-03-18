@@ -1,0 +1,25 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3em 1.8em;
+  color: #fff;
+  background: #5e5e7e;
+}
+
+.brand {
+  margin-right: auto;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  li {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 1.3em;
+    }
+  }
+}

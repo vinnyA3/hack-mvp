@@ -15,10 +15,6 @@ body {
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1320px;
   margin: 0 auto;
   color: $font-color;
 }
@@ -33,6 +29,11 @@ h6 {
   margin: 0;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 p,
 input,
 figcaption,
@@ -44,18 +45,10 @@ a {
 
 a {
   text-decoration: none;
+  color: inherit;
 
   &:visited,
   &:active {
     text-decoration: none;
-  }
-
-  &:visited {
-    color: #0066c0;
-  }
-
-  &:hover {
-    color: #cb6a1f;
-    text-decoration: underline;
   }
 }

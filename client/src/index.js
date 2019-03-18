@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
-
-const App = () => {
-  return <h1>Hello World!!</h1>;
-};
+import App from './App';
+import './global.scss';
 
 render(<App />, document.getElementById('app'));
