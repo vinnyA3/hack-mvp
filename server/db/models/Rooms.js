@@ -5,8 +5,7 @@ const Room = Schema({
     type: String,
     required: true,
   },
-  users: [{ type: Types.ObjectId, ref: 'User' }],
-  messages: [{ username: { type: String, required: true }, text: String }],
+  chat_messages: [{ type: Types.ObjectId(), ref: 'Message' }],
 });
 
 module.exports = model('Room', Room);
