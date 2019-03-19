@@ -1,0 +1,12 @@
+.credentialPrompt {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  height: 30em;
+
+  form {
+    height: 20em;
+  }
+}

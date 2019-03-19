@@ -15,9 +15,31 @@
 }
 
 .chatWindow {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
   border-radius: 3px;
   background-color: #E2E2E2;  
-  overflow: hidden;
+  // overflow: hidden;
+  box-shadow: 0 0 0.4rem rgba(0,0,0,0.4);
+}
+
+.settings {
+  height: 2em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #5E5E7E;
+  color: #fff;
+
+  i:not(:last-child) {
+    margin-right: .5em;
+  }
+}
+
+.messages {
+  max-height: 15em;
+  overflow-y: auto;
 }
 
 .message {
