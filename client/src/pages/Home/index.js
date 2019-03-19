@@ -13,7 +13,6 @@ class Home extends Component {
 
   componentDidMount() {
     axios.get('http://localhost:3000/lobby').then(({ data }) => {
-      console.log(data.data);
       this.setState({
         rooms: data.data,
       });
@@ -25,7 +24,11 @@ class Home extends Component {
       <div className={container}>
         {this.state.rooms.length > 0
           ? this.state.rooms.map(room => {
-              return <Link to={'/video/' + room._id}>{room.roomname}</Link>;
+              return (
+                <div>
+                  <Link to={'/video/' + room._id}>{room.roomname}</Link>
+                </div>
+              );
             })
           : ''}
       </div>
