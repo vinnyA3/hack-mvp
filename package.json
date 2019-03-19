@@ -15,7 +15,7 @@
     "client:dev": "webpack-dev-server --config webpack.config.js",
     "server:dev": "NODE_PATH=./server nodemon server/index.js",
     "clean:dist": "rimraf ./dist",
-    "dev": "npm-run-all --parallel client:dev",
+    "dev": "npm-run-all --parallel client:dev server:dev",
     "build": "npm run clean:dist && webpack -p"
   },
   "jest": {
@@ -39,6 +39,7 @@
     "axios": "^0.18.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "mongoose": "^5.4.19",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^5.0.0"
