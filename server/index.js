@@ -15,6 +15,12 @@ app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/lobby', (req, res) => {
+  Room.find().then(data => {
+    res.status(200).send({ message: 'retrieving all messages', data });
+  });
+});
+
 app.get('/lobby/:roomname', (req, res) => {
   const { roomname } = req.params;
 
@@ -50,9 +56,10 @@ app.post('/lobby', (req, res) => {
 
   Room.findOneAndUpdate(
     { roomname },
-    { $push: { chat_messages: newMessage } }
-  ).then(_ => {
-    res.status(200).send({ message: 'Message created!' });
+    { $push: { chat_messages: newMessage } },
+    { new: true }
+  ).then(({ chat_messages }) => {
+    res.status(200).send({ message: 'Message created!', chat_messages });
   });
 });
 
