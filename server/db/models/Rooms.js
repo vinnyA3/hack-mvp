@@ -4,8 +4,19 @@ const Room = Schema({
   roomname: {
     type: String,
     required: true,
+    unique: true,
   },
-  chat_messages: [{ type: Types.ObjectId(), ref: 'Message' }],
+  video_url: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  chat_messages: [
+    {
+      username: { type: String, required: true },
+      text: String,
+    },
+  ],
 });
 
 module.exports = model('Room', Room);

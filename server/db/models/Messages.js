@@ -1,7 +1,7 @@
 const { Schema, Types, model } = require('mongoose');
 
 const Message = Schema({
-  room_id: { type: Types.ObjectId(), ref: 'Room' },
+  username: { type: String, required: true },
   text: String,
 });
 
