@@ -9,7 +9,9 @@ $modal-position: fixed;
 
 .modal {
   position: $modal-position;
-  width: 50vw;
+  width: 75%;
+  left: 50%;
+  margin-left: -37.5%;
 
   * {
     @include z-index(modal-content);

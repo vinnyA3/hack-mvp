@@ -1,12 +1,12 @@
 .tooltip {
-  position: absolute;
-  bottom: 130%;
-  right: -10%;
-  width: 200%;
-  background-color: #fff;
-  border-radius: 3px;
-  padding: 1.3em;
-  box-shadow: 0 0.1em 0.4em 0.04em rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 108%;
+    right: 0%;
+    width: 110%;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 1.3em;
+    box-shadow: 0 0.1em 0.4em 0.04em rgba(0, 0, 0, 0.3);
 
   &__close {
     position: absolute;
@@ -19,7 +19,7 @@
     bottom: 0;
     height: 2.2em;
     width: 2.2em;
-    right: 40%;
+    right: 5%;
 
     &::before {
       content: '';
@@ -35,7 +35,7 @@
       content: '';
       position: absolute;
       bottom: -0.5em;
-      left: 0;
+      left: 3px;
       height: 100%;
       width: 100%;
       background-color: #fff;
