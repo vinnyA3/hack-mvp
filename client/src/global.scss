@@ -15,8 +15,12 @@ body {
 }
 
 body {
+  position: relative;
   margin: 0 auto;
   color: $font-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // heading resets
