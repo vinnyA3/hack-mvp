@@ -1,16 +1,3 @@
-const path = require('path');
-const sqlite3 = require('sqlite3').verbose();
+const mongoose = require('mongoose');
 
-try {
-  const db = new sqlite3.Database(path.join(__dirname, './db.products')).on(
-    'error',
-    err => {
-      throw Error('Error occurred: ' + err);
-    }
-  );
-
-  module.exports = db;
-} catch (e) {
-  console.error(e);
-  process.exit(1);
-}
+mongoose.connect('mongodb://localhost:27017/mvp', { useNewUrlParser: true });
