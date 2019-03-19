@@ -15,8 +15,8 @@ app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/lobby', (req, res) => {
-  const { roomname } = req.body;
+app.get('/lobby/:roomname', (req, res) => {
+  const { roomname } = req.params;
 
   if (!roomname) {
     return res
