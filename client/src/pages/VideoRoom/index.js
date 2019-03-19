@@ -5,6 +5,7 @@ import {
   sidebar,
   chatWindow,
   settings,
+  option,
   messages,
   message,
   message__text,
@@ -14,12 +15,14 @@ import {
 import axios from 'axios';
 import CredentialModal from './components/credentialModal';
 import Tooltip from 'components/tooltip';
+import io from 'socket.io-client';
 
+const socket = io('http://localhost:3000');
 const defaultRoom = 'main';
 
 const renderChat = chat_messages =>
   chat_messages.map(({ _id, username, text }) => (
-    <div key={_id || 'asdfa'} className={message}>
+    <div key={_id} className={message}>
       <div className={message__avatar} />
       <section className={message__text}>
         <h3>{username}</h3>
@@ -45,8 +48,10 @@ class VideoRoom extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
     this.myRef = this.myRef || React.createRef();
+    this.secondRef = this.secondRef || React.createRef();
     this.toggleTooltip = this.toggleTooltip.bind(this);
     this.setUsername = this.setUsername.bind(this);
+    this.handleChat = this.handleChat.bind(this);
   }
 
   toggleTooltip() {
@@ -73,16 +78,21 @@ class VideoRoom extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    // axios request to the server to post the message in the chag...
-    // format as such
-    // message: user_message, lobby name, username
 
     if (!this.state.user) {
-      // if the user does not exist, dont' post and tell user to signup!!
-      // using reusable modal class, create a modal for user to login / signup
       this.setState({ showModal: true });
       return;
     }
+
+    if (this.state.user_message === '') {
+      return;
+    }
+
+    // emit event
+    socket.emit('chat message', {
+      username: this.state.user,
+      text: this.state.user_message,
+    });
 
     axios
       .post('http://localhost:3000/lobby', {
@@ -93,12 +103,11 @@ class VideoRoom extends Component {
         },
       })
       .then(({ data }) => {
-        // for MVP, update the chat messages to show the newest message
         this.setState({
-          chat_messages: data.chat_messages,
+          user_message: '',
         });
 
-        console.log(data);
+        this.secondRef.scrollTop = this.secondRef.scrollHeight;
       });
   }
 
@@ -108,7 +117,19 @@ class VideoRoom extends Component {
     });
   }
 
+  handleChat(data) {
+    this.setState(prevState => {
+      return {
+        chat_messages: (prevState.chat_messages.push(data),
+        prevState.chat_messages),
+      };
+    });
+  }
+
   componentDidMount() {
+    // connect to socket
+    socket.on('chat message', this.handleChat);
+
     // get props
     axios.get(`http://localhost:3000/lobby/${defaultRoom}`).then(({ data }) => {
       const { roomname, chat_messages } = data[0];
@@ -123,25 +144,38 @@ class VideoRoom extends Component {
     return (
       <Fragment>
         <main className={main}>
-          <h3>Hello World!!</h3>
+          <iframe
+            width="560"
+            height="315"
+            src={`https://www.youtube.com/embed/${this.state.video_url}`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          />
         </main>
         <aside className={sidebar}>
           <div className={chatWindow} ref={this.myRef}>
             <div className={settings}>
-              <div>
+              <Fragment>
                 {!this.state.user ? (
-                  <a onClick={this.toggleTooltip}>
-                    <i className="fa fa-user" />
-                  </a>
+                  <div className={option}>
+                    <a onClick={this.toggleTooltip}>
+                      <i className="fa fa-user" />
+                    </a>
+                  </div>
                 ) : (
-                  <span>
-                    <i className="fa fa-user" /> <span>{this.state.user}</span>
-                  </span>
+                  <div className={option}>
+                    <span>
+                      <i className="fa fa-user" />{' '}
+                      <span>{this.state.user}</span>
+                    </span>
+                  </div>
                 )}
-                <i className="fa fa-cog" />
-              </div>
+                <div className={option}>
+                  <i className="fa fa-cog" />
+                </div>
+              </Fragment>
             </div>
-            <div className={messages}>
+            <div id="chat" className={messages}>
               {this.state.chat_messages.length > 0
                 ? renderChat(this.state.chat_messages)
                 : ''}
@@ -150,7 +184,9 @@ class VideoRoom extends Component {
               <input
                 type="text"
                 placeholder="Message..."
+                name="text"
                 onChange={this.handleInputChange}
+                value={this.state.user_message}
               />
               <input type="submit" />
             </form>

@@ -6,6 +6,11 @@ const app = express();
 const cors = require('cors');
 const db = require('db');
 
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+
+// socket
+
 // ===== models
 const Room = require('db/models/Rooms');
 
@@ -63,9 +68,15 @@ app.post('/lobby', (req, res) => {
   });
 });
 
-app.get('*', (req, res) => {
-  res.status(404).send({ message: 'Page not found!' });
+// io
+io.on('connection', socket => {
+  socket.on('chat message', msg => {
+    io.emit('chat message', msg);
+  });
+
+  console.log('a client has now connected!!!!!!!!!!!');
 });
 
 // ROUTES
-app.listen(PORT, () => (console.log(`Listening on port ${PORT}`), void 0));
+// app.listen(PORT, () => (console.log(`Listening on port ${PORT}`), void 0));
+server.listen(PORT, () => (console.log(`Listening on port ${PORT}`), void 0));

@@ -14,7 +14,10 @@ const Navigation = () => (
         <Link to="/">Home</Link>
       </li>
       <li className={styles.item}>
-        <Link to="/video">Video</Link>
+        <a href="#">
+          <i className="fab fa-github" />
+          &nbsp; Github
+        </a>
       </li>
     </ul>
   </nav>

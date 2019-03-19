@@ -9,9 +9,8 @@ $modal-position: fixed;
 
 .modal {
   position: $modal-position;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  height: 50vh;
+  width: 50vw;
 
   * {
     @include z-index(modal-content);

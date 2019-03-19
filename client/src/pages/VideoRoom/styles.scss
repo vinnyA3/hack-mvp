@@ -8,10 +8,12 @@
 
 .main {
   grid-area: main;
+  padding: 1.3em;
 }
 
 .sidebar {
   grid-area: sidebar;
+  padding: 1.3em;
 }
 
 .chatWindow {
@@ -25,15 +27,19 @@
 }
 
 .settings {
-  height: 2em;
+  padding: .8em 1.2em;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   background-color: #5E5E7E;
   color: #fff;
+}
 
-  i:not(:last-child) {
-    margin-right: .5em;
+.option {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: .8em;
   }
 }
 

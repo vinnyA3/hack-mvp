@@ -25,5 +25,16 @@
 
 .footer {
   grid-area: footer;
-  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5e5e7e;
+  color: #fff;
+  padding: 1.3em 1.8em;
 }
