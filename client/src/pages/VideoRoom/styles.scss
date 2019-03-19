@@ -5,3 +5,49 @@
   justify-content: center;
   align-items: center;
 }
+
+.main {
+  grid-area: main;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.chatWindow {
+  border-radius: 3px;
+  background-color: #E2E2E2;  
+  overflow: hidden;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  font-size: .85rem;
+  padding: .8rem .75rem;
+  background-color: #fff;
+  color: #677989;
+
+  &:not(:last-child) {
+    margin-bottom: 1px;
+  }
+
+  &:hover {
+    background-color: #EFEFEF;
+  }
+
+  &__avatar {
+    height: 3em;
+    width: 3em;
+    background-color: #a4cab4;
+    border-radius: 100%;
+    margin-right: .8em;
+  }
+
+  &__text {
+    h3 {
+      font-size: .9rem;
+      margin-bottom: .3em;
+    }
+  }
+}
